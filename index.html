@@ -182,7 +182,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 }
 
 /* ===== CASES ===== */
-.case-hero{background:var(--royal);color:white;padding:2.5rem 2rem 2.75rem;text-align:center}
+.case-hero{background:var(--royal);color:white;padding:2.5rem 2rem 2.75rem;text-align:center;max-width:780px;margin:0 auto;border-radius:0 0 12px 12px}
 .case-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);font-size:.7rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .85rem;border-radius:20px;margin-bottom:.85rem}
 .case-pill-dot{width:8px;height:8px;border-radius:50%}
 .case-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:400;line-height:1.2;color:white;max-width:600px;margin:0 auto .65rem}
@@ -296,7 +296,8 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .stelling-q{padding:.85rem 1rem;font-family:'DM Sans',sans-serif;font-style:normal;font-size:.95rem;color:var(--text);line-height:1.6;background:var(--cream);border-left:3px solid var(--corn)}
 .stelling-reveal{display:none;padding:.75rem 1rem;font-size:.88rem;line-height:1.65;background:var(--corn-l);border-top:1px solid var(--border);color:var(--text)}
 .stelling-wrap{display:flex;flex-direction:column;gap:10px;margin:1rem 0}
-.top-nav{background:var(--royal);padding:.45rem 2rem .7rem;display:flex;gap:7px;justify-content:center;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap}</style>
+.top-nav{background:var(--royal);padding:.45rem 2rem .7rem;display:flex;gap:7px;justify-content:center;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.case-wrap{max-width:780px;margin:0 auto;padding:0 2rem 3.5rem;}</style>
 </head>
 <body>
 <header>
@@ -418,18 +419,20 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 <div class="content">
   <div class="lbl">De basis van alles</div>
   <h2 style="font-size:clamp(1.4rem,3vw,2rem);border:none;padding-bottom:0;margin-bottom:.75rem">De kern reist mee.<br>Het verhaal past zich aan.</h2>
-  <p class="bp" style="margin-bottom:1.5rem">De kern van een merk, wie je bent en waarom je bestaat, is identiek in NL en BE. Maar hoe je die kern vertaalt naar campagnes en toon, stem je af op de markt. Test jezelf.</p>
+  <p class="bp" style="margin-bottom:1.5rem">De kern van een merk, wie je bent en waarom je bestaat, is identiek in NL en BE. Maar hoe je die kern vertaalt naar verhaal, campagnes en toon, stem je af op de markt en doelgroep. Test jezelf.</p>
 
   <div class="stelling-wrap" style="margin-top:.75rem">
 
     <div class="stelling" id="st1">
-      <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:.3rem">Merk</div>
-      <div style="font-size:.95rem;font-weight:600;color:var(--royal);margin-bottom:.2rem">IKEA</div>
-      <div style="font-size:.82rem;color:var(--muted);margin-bottom:.85rem;font-style:italic">"Een betere dagelijkse leefomgeving voor zoveel mogelijk mensen."</div>
+      <div style="padding:.9rem 1rem .5rem">
+        <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:.3rem">Merk</div>
+        <div style="font-size:.95rem;font-weight:600;color:var(--royal);margin-bottom:.2rem">IKEA</div>
+        <div style="font-size:.82rem;color:var(--muted);margin-bottom:0;font-style:italic">"Een beter dagelijks leven creëren voor zo veel mogelijk mensen."</div>
+      </div>
       <div class="stelling-q">Welke campagnezin is de Nederlandse vertaling van deze missie?</div>
       <div style="display:flex;flex-direction:column;gap:7px;margin:.6rem 0 .85rem">
-        <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">A.</strong> "Thuis is de mooiste plek. Wij maken hem betaalbaar."</div>
-        <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">B.</strong> "Hier maak je het jezelf gemakkelijk. Welkom thuis."</div>
+        <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">A.</strong> "Betaalbaar wonen begint hier. Stijlvol, slim en voor iedereen."</div>
+        <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">B.</strong> "Jij maakt van een huis een thuis. Wij helpen je daarbij, elke dag opnieuw."</div>
       </div>
       <div class="stelling-opts">
         <button class="stelling-btn" onclick="stel(1,'A',this,'A')">A &rarr; NL</button>
@@ -437,30 +440,32 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
       </div>
       <div class="stelling-reveal" id="sr1">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:.5rem">
-          <div style="background:var(--royal);border-radius:6px;padding:.5rem .75rem;font-size:.82rem;color:white"><strong style="color:var(--corn);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">NL: optie A</strong>Direct, functioneel, prijsfocus. In NL overtuig je met een concrete belofte: betaalbaar en mooi.</div>
-          <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:.5rem .75rem;font-size:.82rem"><strong style="color:var(--orange);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">BE: optie B</strong>Warm, uitnodigend, thuis als gevoel. In BE gaat het over herkenning en nabijheid voor je de claim stelt.</div>
+          <div style="background:var(--royal);border-radius:6px;padding:.5rem .75rem;font-size:.82rem;color:white"><strong style="color:var(--corn);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">NL: optie A</strong>Direct, functioneel, prijsfocus. In NL overtuig je met een concrete belofte. De klant wil weten wat hij krijgt en wat het kost. Mooi en betaalbaar in één zin werkt.</div>
+          <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:.5rem .75rem;font-size:.82rem"><strong style="color:var(--orange);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">BE: optie B</strong>Warm, anekdotisch, thuis als gevoel. In BE wil je de klant eerst laten glimlachen voor je iets belooft. De kleine herkenbare details openen het verhaal, de claim volgt vanzelf.</div>
         </div>
         <p style="font-size:.8rem;color:var(--muted);font-style:italic;margin-top:.3rem">Dezelfde missie. Twee totaal andere vertaalslagen.</p>
       </div>
     </div>
 
     <div class="stelling" id="st2">
-      <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:.3rem">Merk</div>
-      <div style="font-size:.95rem;font-weight:600;color:var(--royal);margin-bottom:.2rem">Hema</div>
-      <div style="font-size:.82rem;color:var(--muted);margin-bottom:.85rem;font-style:italic">"Verrassend goed, verrassend goedkoop. Voor iedereen."</div>
+      <div style="padding:.9rem 1rem .5rem">
+        <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:.3rem">Merk</div>
+        <div style="font-size:.95rem;font-weight:600;color:var(--royal);margin-bottom:.2rem">Hema</div>
+        <div style="font-size:.82rem;color:var(--muted);margin-bottom:0;font-style:italic">"Een beter alledaags leven in een mooiere wereld."</div>
+      </div>
       <div class="stelling-q">Welke campagnezin landt het sterkst in BE?</div>
       <div style="display:flex;flex-direction:column;gap:7px;margin:.6rem 0 .85rem">
-        <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">A.</strong> "Kwaliteit die verrassend. Prijzen die niet."</div>
-        <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">B.</strong> "Van de ochtend tot de avond. Van jong tot oud. Hema is er gewoon."</div>
+        <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">A.</strong> "Een thuis dat er mag zijn. Al meer dan 100 jaar jouw vertrouwde buur."</div>
+        <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">B.</strong> "Goeie spullen. Eerlijke prijs. Punt."</div>
       </div>
       <div class="stelling-opts">
-        <button class="stelling-btn" onclick="stel(2,'A',this,'B')">A &rarr; BE</button>
-        <button class="stelling-btn" onclick="stel(2,'B',this,'B')">B &rarr; BE</button>
+        <button class="stelling-btn" onclick="stel(2,'A',this,'A')">A &rarr; BE</button>
+        <button class="stelling-btn" onclick="stel(2,'B',this,'A')">B &rarr; BE</button>
       </div>
       <div class="stelling-reveal" id="sr2">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:.5rem">
-          <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:.5rem .75rem;font-size:.82rem"><strong style="color:var(--orange);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">NL: optie A</strong>Puntig, gevat, speelt op prijs en verrassing. In NL werkt directe humor met een scherpe claim.</div>
-          <div style="background:var(--royal);border-radius:6px;padding:.5rem .75rem;font-size:.82rem;color:white"><strong style="color:var(--corn);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">BE: optie B</strong>Warm, alledaags, voor iedereen. In BE werkt nabijheid en herkenbaarheid als ingang, niet een scherpe grap.</div>
+          <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:.5rem .75rem;font-size:.82rem"><strong style="color:var(--orange);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">NL: optie B</strong>Puntig, direct, geen omwegen. In NL werkt bondigheid. Drie woorden die de kern zeggen zonder uitleg. De Nederlander haakt aan op efficiëntie en helderheid.</div>
+          <div style="background:var(--royal);border-radius:6px;padding:.5rem .75rem;font-size:.82rem;color:white"><strong style="color:var(--corn);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">BE: optie A</strong>Warm, vertrouwd, met een tijdloos gevoel. In BE werkt continuïteit en nabijheid. "Jouw vertrouwde buur" bouwt herkenning. De Belgische klant wil weten dat je er al lang bent en blijft.</div>
         </div>
         <p style="font-size:.8rem;color:var(--muted);font-style:italic;margin-top:.3rem">Onthoud dit patroon: je ziet het straks drie keer terugkomen bij de cases.</p>
       </div>
@@ -500,6 +505,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   <h1>Albert Heijn<br><em>"Maak eerst de marktkaart."</em></h1>
   <p>Zelfde merk. Zelfde missie. Totaal andere campagnes. Waarom?</p>
 </div>
+<div class="case-wrap">
 <div class="content">
   <div class="case-nav">
     <div class="case-nav-item active">1 · Albert Heijn</div>
@@ -573,7 +579,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   </div>
 
   <div class="btn-row"><button class="btn btn-primary" onclick="go('c1-quiz')">Speel mee</button></div>
-</div>
+</div></div>
 
 <div class="screen" id="c1-quiz">
 <div class="case-hero">
@@ -581,6 +587,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   <h1>Albert Heijn<br><em>raad mee</em></h1>
   <p>Drie vragen over campagnes, claims en merkverhaal over de grens.</p>
 </div>
+<div class="case-wrap">
 <div class="content">
 
   <div class="qcard" id="c1q1">
@@ -603,7 +610,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   <div class="qcard" id="c1q2">
     <div class="qcard-head"><span class="qcard-title">Vraag 2 · Prijs als merkverhaal</span><span class="qcard-pts">10 pt</span></div>
     <div class="qcard-body">
-      <div class="qcard-sit">AH zet in Belgie sterk in op prijspromoties zoals de Hamsterweken. In Nederland werken die ook, maar met minder impact per actie. Onderzoek toont: 25% van NL-consumenten koopt enkel met korting, in Belgie slechts 8%. Toch slaagt AH Belgie op prijs. Hoe kan dat?</div>
+      <div class="qcard-sit">AH zet in Belgie sterk in op prijspromoties zoals de Hamsterweken. Opvallend: Belgische consumenten zijn minder promotiegevoelig dan Nederlanders, toch werkt de campagne. Hoe komt dat?</div>
       <div class="qcard-q">Wat maakt de prijsstrategie in Belgie anders dan puur kortingsdenken?</div>
       <div class="qcard-opts" id="c1q2-opts">
         <button class="qopt" onclick="qa('c1q2',0,this,'miss')"><span class="qopt-ltr">A</span>Belgen zijn prijsbewuster, dus de Hamsterweken spelen in op een culturele eigenschap van de Belgische consument.</button>
@@ -657,7 +664,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   </div>
       </div>
     </div>
-  </div>
+  </div></div>
 
 
   
@@ -672,6 +679,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   <h1>Coolblue<br><em>"Bewaar je toon, lokaliseer je bewijs."</em></h1>
   <p>"Alles voor een glimlach." In NL en BE. Maar de uitvoering verschilt fundamenteel.</p>
 </div>
+<div class="case-wrap">
 <div class="content">
   <div class="case-nav">
     <div class="case-nav-item done" onclick="go('c1-intro')" style="cursor:pointer">1 · Albert Heijn</div>
@@ -752,7 +760,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   </div>
 
   <div class="btn-row"><button class="btn btn-primary" onclick="go('c2-quiz')">Speel mee</button></div>
-</div>
+</div></div>
 
 <div class="screen" id="c2-quiz">
 <div class="case-hero" style="background:linear-gradient(135deg,#1B2B6B 0%,#0D4A8F 100%)">
@@ -760,6 +768,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   <h1>Coolblue<br><em>raad mee</em></h1>
   <p>Wat pas je aan in je merkverhaal als je naar Belgie gaat? En wat laat je bewust met rust?</p>
 </div>
+<div class="case-wrap">
 <div class="content">
 
   <div class="qcard" id="c2q1">
@@ -834,7 +843,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
         
       </div>
     </div>
-  </div>
+  </div></div>
 
 
   
@@ -844,11 +853,12 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 <!-- ==================== CASE 3: QMUSIC ==================== -->
 
 <div class="screen" id="c3-intro">
-<div class="case-hero" style="background:linear-gradient(135deg,#1B2B6B 0%,#1B6B4A 100%)">
+<div class="case-hero">
   <div class="case-pill"><span class="case-pill-dot" style="background:var(--mint)"></span>Case 3 van 3</div>
   <h1>Qmusic<br><em>"Laat anderen voor je spreken."</em></h1>
   <p>Zelfde claim in NL en BE. Totaal andere lading. Hoe kan dat?</p>
 </div>
+<div class="case-wrap">
 <div class="content">
   <div class="case-nav">
     <div class="case-nav-item done" onclick="go('c1-intro')" style="cursor:pointer">1 · Albert Heijn</div>
@@ -911,14 +921,15 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   </div>
 
   <div class="btn-row"><button class="btn btn-primary" onclick="go('c3-quiz')">Speel mee</button></div>
-</div>
+</div></div>
 
 <div class="screen" id="c3-quiz">
-<div class="case-hero" style="background:linear-gradient(135deg,#1B2B6B 0%,#1B6B4A 100%)">
+<div class="case-hero">
   <div class="case-pill"><span class="case-pill-dot" style="background:var(--mint)"></span>Case 3 · Quiz</div>
   <h1>Qmusic<br><em>raad mee</em></h1>
   <p>Dezelfde claim. Andere lading. Wat maakt het verschil in een gedragen merkverhaal?</p>
 </div>
+<div class="case-wrap">
 <div class="content">
 
   <div class="qcard" id="c3q1">
@@ -994,7 +1005,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
         
       </div>
     </div>
-  </div>
+  </div></div>
 
 
   
@@ -1007,6 +1018,21 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 <div class="content">
   <div class="lbl">Drie cases, hetzelfde patroon</div>
   <h2>Drie merken. Drie lessen. Een patroon.</h2>
+
+  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:1.5rem">
+    <div style="display:flex;gap:12px;align-items:flex-start;background:var(--royal);border-radius:9px;padding:.85rem 1rem">
+      <div style="font-size:.8rem;font-weight:600;color:var(--corn);flex-shrink:0;min-width:80px;letter-spacing:.03em">Albert Heijn</div>
+      <div style="font-size:.88rem;color:white;line-height:1.5">Het verhaal volgt de positie. Maak eerst de marktkaart en dan kies je jouw positie en verhaal.</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:flex-start;background:var(--royal);border-radius:9px;padding:.85rem 1rem">
+      <div style="font-size:.8rem;font-weight:600;color:var(--corn);flex-shrink:0;min-width:80px;letter-spacing:.03em">Coolblue</div>
+      <div style="font-size:.88rem;color:white;line-height:1.5">Bewaar je persoonlijkheid. Lokaliseer je bewijs. De Belgische klant gelooft jou pas als hij jou herkent.</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:flex-start;background:var(--royal);border-radius:9px;padding:.85rem 1rem">
+      <div style="font-size:.8rem;font-weight:600;color:var(--corn);flex-shrink:0;min-width:80px;letter-spacing:.03em">Qmusic</div>
+      <div style="font-size:.88rem;color:white;line-height:1.5">Laat anderen voor je spreken. In BE draagt de gemeenschap je verhaal, niet jij zelf.</div>
+    </div>
+  </div>
 
   <div class="lbl">Een gedragen merkverhaal in Belgie</div>
   <div style="display:flex;flex-direction:column;gap:9px;margin:.75rem 0 1.25rem">
@@ -1060,7 +1086,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
     <div class="fw-effect-item"><div class="fw-effect-dot">✦</div><div>Communicatie die echt iets losmaakt. Meetbare groei in beleving en verbondenheid.</div></div>
   </div>
   <div class="box-corn"><p>Plekken en merken bloeien niet door een nieuw logo of een campagne. Ze bloeien als het verhaal van binnenuit wordt gedragen.</p></div>
-  <div class="btn-row"><button class="btn btn-primary" onclick="go('eind')">Dit neem je mee &rarr;</button></div>
+  <div class="btn-row"><button class="btn btn-primary" onclick="go('act1')">Wat doe jij morgen &rarr;</button></div>
 </div>
 </div>
 
@@ -1072,17 +1098,17 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
   <div style="display:flex;flex-direction:column;gap:9px;margin:.9rem 0 1.25rem">
     <div style="background:white;border:1px solid var(--border);border-radius:9px;padding:1rem 1.1rem">
-      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 1 — AH-les</div>
+      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 1 · AH-les</div>
       <p style="font-size:.93rem;font-weight:500;color:var(--royal);margin-bottom:.3rem">Welk terrein is in jouw Belgische markt al bezet?</p>
       <p style="font-size:.88rem;color:var(--muted);line-height:1.55">Wie zijn de spelers? Hoe positioneren zij zich? Welke ruimte past bij jouw kern? Pas als je dit weet, kies je je toon en campagne.</p>
     </div>
     <div style="background:white;border:1px solid var(--border);border-radius:9px;padding:1rem 1.1rem">
-      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 2 — Coolblue-les</div>
+      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 2 · Coolblue-les</div>
       <p style="font-size:.93rem;font-weight:500;color:var(--royal);margin-bottom:.3rem">Waar bewijs jij jouw belofte aan de Belgische klant?</p>
       <p style="font-size:.88rem;color:var(--muted);line-height:1.55">Je klantcontact, je service, je fysieke aanwezigheid. Klinkt je campagne Belgisch maar voelt je service Nederlands? Dan is er een kloof. Dicht die eerst.</p>
     </div>
     <div style="background:white;border:1px solid var(--border);border-radius:9px;padding:1rem 1.1rem">
-      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 3 — Qmusic-les</div>
+      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 3 · Qmusic-les</div>
       <p style="font-size:.93rem;font-weight:500;color:var(--royal);margin-bottom:.3rem">Wie laat jij voor jou spreken in Belgie?</p>
       <p style="font-size:.88rem;color:var(--muted);line-height:1.55">In NL overtuig je met eigen claims. In BE overtuigen jouw klanten voor jou. Welke Belgische klant spreekt jouw taal en draagt jouw verhaal?</p>
     </div>
@@ -1227,7 +1253,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
     <div class="verg-insight">Belgische consumenten stellen veel detailvragen voor ze beslissen. Een website die dat goed beantwoordt, converteert significant beter in BE.</div>
   </div>
 
-  <div class="btn-row"><button class="btn btn-primary" onclick="go('act1')">Wat doe jij morgen &rarr;</button></div>
+  <div class="btn-row"><button class="btn btn-primary" onclick="go('afs1')">Vragen? &rarr;</button></div>
 </div>
 </div>
 
@@ -1263,14 +1289,14 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
   
 
-  <div class="btn-row"><button class="btn btn-primary" onclick="go('afs1')">Vragen? &rarr;</button></div>
+  <div class="btn-row"><button class="btn btn-primary" onclick="go('s9')">De 6 grootste verschillen &rarr;</button></div>
 </div>
 </div>
 <div class="screen" id="afs1">
 <div class="content">
 
   <div style="background:var(--royal);border-radius:14px;padding:5rem 2rem;text-align:center;margin-bottom:1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:260px">
-    <div style="font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.25rem">Q&amp;A</div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(1rem,3vw,1.4rem);font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:1.25rem">Q&amp;A</div>
     <p style="font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,4.2rem);color:white;font-style:italic;margin:0;line-height:1.1">Jouw vraag?</p>
   </div>
 
@@ -1286,8 +1312,8 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 </div>
 
 <script>
-const screens=['s0','s1','s1b','s2_wie','s_vraag','s_principe','s10','c1-intro','c1-quiz','c2-intro','c2-quiz','c3-intro','c3-quiz','p1','p2','eind','s9','s9b','s9c','act1','afs1'];
-const pcts=[0,3,6,9,13,17,22,27,33,38,44,49,55,60,66,72,76,80,84,89,95,100];
+const screens=['s0','s1','s1b','s2_wie','s_vraag','s_principe','s10','c1-intro','c1-quiz','c2-intro','c2-quiz','c3-intro','c3-quiz','p1','p2','act1','s9','s9b','s9c','afs1'];
+const pcts=[0,3,6,9,13,17,22,27,33,38,44,49,55,60,66,72,78,83,88,94,100];
 const bloks={0:'s0',1:'c1-intro',2:'p1'};
 
 function go(id){
