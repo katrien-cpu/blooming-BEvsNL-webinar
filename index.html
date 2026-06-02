@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blooming Stories, Zelfde merk, ander verhaal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,500&family=Oswald:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --royal:#1B2B6B;--mint:#A8D8C8;--mint-l:#E6F4EF;
-  --corn:#F5C842;--corn-l:#FEF7DC;
-  --orange:#E8581A;--orange-l:#FDEDE5;
-  --cream:#FAF8F3;--text:#1a1a1a;--muted:#6b6b6b;--border:#E2DDD6;
+  --royal:#27449c;--mint:#b4decd;--mint-l:#E6F4EF;
+  --corn:#fed244;--corn-l:#FEF7DC;
+  --portland:#f15f3e;--orange-l:#FDEDE5;
+  --cream:#fafaf8;--text:#1a1a1a;--muted:#6b6b6b;--border:#E2DDD6;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-size:17px;font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);min-height:100vh}
@@ -21,16 +21,16 @@ header{background:var(--royal);padding:.95rem 2rem;display:flex;align-items:cent
 .hdate{font-size:.68rem;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase}
 .prog-wrap{background:var(--royal);padding:0 2rem .85rem}
 .prog-track{background:rgba(255,255,255,.15);height:3px;border-radius:2px;max-width:780px;margin:0 auto}
-.prog-fill{height:3px;background:var(--corn);border-radius:2px;transition:width .5s ease;width:0%}
+.prog-fill{height:3px;background:var(--portland);border-radius:2px;transition:width .5s ease;width:0%}
 .screen{display:none}
 .screen.active{display:block;animation:fu .35s ease}
 @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .content{max-width:780px;margin:0 auto;padding:2.25rem 2rem 3.5rem}
 .dots{display:flex;gap:5px;margin-bottom:1.5rem;flex-wrap:wrap}
 .dot{width:18px;height:3px;border-radius:2px;background:var(--border);transition:background .3s}
-.dot.done{background:var(--mint)}.dot.active{background:var(--orange)}
-.lbl{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.6rem;display:flex;align-items:center;gap:7px}
-.lbl::before{content:'';display:block;width:14px;height:2px;background:var(--orange)}
+.dot.done{background:var(--mint)}.dot.active{background:var(--portland)}
+.lbl{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--portland);margin-bottom:.6rem;display:flex;align-items:center;gap:7px}
+.lbl::before{content:'';display:block;width:14px;height:2px;background:var(--portland)}
 h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:400;line-height:1.25;color:var(--royal);margin-bottom:.8rem;padding-bottom:.6rem;border-bottom:1.5px solid var(--border)}
 .lead{font-size:1.05rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;font-weight:300}
 .lead strong{color:var(--text);font-weight:500}
@@ -72,14 +72,14 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.5rem 0}
 .person{border-radius:12px;overflow:hidden;border:1px solid var(--border);position:relative;display:flex;flex-direction:column}
 .person::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px}
-.be-p{background:var(--orange-l)}.be-p::after{background:var(--orange)}
+.be-p{background:var(--orange-l)}.be-p::after{background:var(--portland)}
 .nl-p{background:var(--mint-l)}.nl-p::after{background:var(--mint)}
 .p-photo{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center top;display:block}
 .p-info{padding:.9rem 1rem 1.2rem}
 .p-flag{font-size:1.1rem;margin-bottom:.2rem}
 .p-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:.5rem}
 .p-quote{font-size:.88rem;font-style:italic;color:var(--muted);line-height:1.55;border-left:2px solid;padding-left:.65rem}
-.be-p .p-quote{border-color:var(--orange)}
+.be-p .p-quote{border-color:var(--portland)}
 .nl-p .p-quote{border-color:var(--mint)}
 /* WEAPONS */
 .weapon{background:white;border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;margin-bottom:.8rem}
@@ -91,7 +91,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .fw-img{width:100%;border-radius:10px;border:1px solid var(--border);display:block;margin:1rem 0}
 .fw-section-lbl{border-radius:7px;padding:.5rem 1rem;margin:1rem 0 4px;font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
 .fwl-kern{background:var(--royal);color:rgba(255,255,255,.75)}
-.fwl-markt{background:var(--orange);color:rgba(255,255,255,.85)}
+.fwl-markt{background:var(--portland);color:rgba(255,255,255,.85)}
 .fwl-verhaal{background:var(--corn);color:var(--royal)}
 .fw-step{display:flex;gap:12px;align-items:flex-start;padding:.8rem 0;border-bottom:1px solid var(--border)}
 .fw-step:last-child{border-bottom:none}
@@ -101,7 +101,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .fw-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
 .fw-tag{display:inline-block;font-size:.67rem;font-weight:500;padding:2px 7px;border-radius:20px;margin-top:4px}
 .t-kern{background:var(--royal);color:white}
-.t-nuance{background:var(--orange-l);color:var(--orange);border:1px solid #f4c4ae}
+.t-nuance{background:var(--orange-l);color:var(--portland);border:1px solid #f4c4ae}
 .t-groot{background:var(--corn-l);color:#5a4a00;border:1px solid var(--corn)}
 /* OVERGANG */
 .overgang{background:var(--royal);border-radius:12px;padding:1.75rem 1.5rem;margin:1rem 0;text-align:center;color:white}
@@ -119,7 +119,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .bril-btn{padding:.45rem .95rem;border-radius:6px;border:1px solid var(--border);background:white;font-family:'DM Sans',sans-serif;font-size:.8rem;cursor:pointer;transition:all .15s;color:var(--text)}
 .bril-btn:hover:not(:disabled){border-color:var(--royal);background:var(--mint-l)}
 .bril-btn.correct{background:var(--mint-l);border-color:var(--mint);color:var(--royal);font-weight:500}
-.bril-btn.wrong{background:var(--orange-l);border-color:var(--orange);color:var(--orange)}
+.bril-btn.wrong{background:var(--orange-l);border-color:var(--portland);color:var(--portland)}
 .bril-btn:disabled{cursor:default}
 .bril-reveal{display:none;margin-top:.6rem;font-size:.9rem;line-height:1.65;color:var(--text);background:var(--corn-l);border-left:3px solid var(--corn);border-radius:0 6px 6px 0;padding:.6rem .8rem}
 .bril-reveal strong{font-weight:500}
@@ -134,7 +134,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .verg-col{padding:.9rem 1rem}
 .verg-col+.verg-col{border-left:1px solid var(--border)}
 .verg-flag{font-size:.67rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.45rem}
-.nl-col .verg-flag{color:var(--royal)}.be-col .verg-flag{color:var(--orange)}
+.nl-col .verg-flag{color:var(--royal)}.be-col .verg-flag{color:var(--portland)}
 .verg-body{font-size:.84rem;color:var(--text);line-height:1.6}
 .verg-example{font-size:.76rem;font-style:italic;color:var(--muted);margin-top:.4rem;padding-top:.4rem;border-top:1px solid var(--border)}
 .verg-insight{background:var(--mint-l);border-top:1px solid var(--border);padding:.7rem 1rem;font-size:.95rem;color:var(--text);line-height:1.6}
@@ -153,12 +153,12 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 /* FW EFFECT */
 .fw-effect{display:flex;flex-direction:column;gap:6px;margin:.75rem 0}
 .fw-effect-item{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--text);line-height:1.55}
-.fw-effect-dot{color:var(--orange);font-size:.9rem;flex-shrink:0;margin-top:1px}
+.fw-effect-dot{color:var(--portland);font-size:.9rem;flex-shrink:0;margin-top:1px}
 /* CASE CARDS */
 .case-list{display:flex;flex-direction:column;gap:8px;margin:1.1rem 0}
 .case-card{display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;border:1px solid var(--border);border-radius:8px;background:white}
 .case-n{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0;color:white}
-.c1{background:var(--orange)}.c2{background:var(--royal)}.c3{background:var(--mint);color:var(--royal)!important}
+.c1{background:var(--portland)}.c2{background:var(--royal)}.c3{background:var(--mint);color:var(--royal)!important}
 .case-info strong{font-size:.86rem;font-weight:500;display:block;color:var(--text);margin-bottom:1px}
 .case-info span{font-size:.74rem;color:var(--muted)}
 .flamingo-c{text-align:center;font-size:3rem;margin:1.25rem 0 .35rem;animation:fl 2s ease-in-out infinite alternate}
@@ -166,7 +166,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 /* BUTTONS */
 .btn-row{display:flex;gap:9px;margin-top:2.5rem;flex-wrap:wrap}
 .btn{padding:.68rem 1.5rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.86rem;font-weight:500;cursor:pointer;transition:all .15s;border:none}
-.btn-primary{background:var(--royal);color:white}.btn-primary:hover{background:#142060}
+.btn-primary{background:var(--portland);color:white;border:none;font-family:'Oswald',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}.btn-primary:hover{background:#142060}
 .btn-corn{background:var(--corn);color:var(--royal)}.btn-corn:hover{background:#e8b730}
 .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}.btn-ghost:hover{background:var(--mint-l)}
 @media(max-width:560px){
@@ -191,13 +191,13 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
 .case-nav{display:flex;gap:7px;margin-bottom:1.5rem;flex-wrap:wrap}
 .case-nav-item{flex:1;padding:.5rem .5rem;border-radius:7px;border:1px solid var(--border);background:white;font-size:.73rem;font-weight:500;color:var(--muted);text-align:center}
-.case-nav-item.active{background:var(--royal);border-color:var(--royal);color:white}
+.case-nav-item.active{background:var(--portland);border-color:var(--portland);color:white;font-family:'Oswald',sans-serif;letter-spacing:.08em}
 .case-nav-item.done{background:var(--mint-l);border-color:var(--mint);color:var(--royal)}
 
 .fw-mini{display:flex;gap:8px;margin:1.1rem 0}
 .fw-mini-block{flex:1;border-radius:8px;padding:.65rem .75rem;text-align:center;font-size:.72rem;font-weight:500}
 .fw-mini-kern{background:var(--royal);color:white}
-.fw-mini-markt{background:var(--orange-l);border:1px solid #f4c4ae;color:var(--orange)}
+.fw-mini-markt{background:var(--orange-l);border:1px solid #f4c4ae;color:var(--portland)}
 .fw-mini-verhaal{background:var(--corn-l);border:1px solid var(--corn);color:#5a4a00}
 .fw-mini-label{font-size:.62rem;opacity:.7;display:block;margin-top:2px}
 
@@ -207,7 +207,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .split-col{padding:.85rem 1rem}
 .split-col+.split-col{border-left:1px solid var(--border)}
 .split-flag{font-size:.67rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.4rem}
-.split-nl .split-flag{color:var(--royal)}.split-be .split-flag{color:var(--orange)}
+.split-nl .split-flag{color:var(--royal)}.split-be .split-flag{color:var(--portland)}
 .split-body{font-size:.93rem;color:var(--text);line-height:1.55}
 .split-sub{font-size:.74rem;font-style:italic;color:var(--muted);margin-top:.35rem}
 .split-insight{background:var(--mint-l);border-top:1px solid var(--border);padding:.65rem 1rem;font-size:.77rem;color:var(--text);line-height:1.6}
@@ -225,7 +225,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .qopt:hover:not(:disabled){background:var(--corn-l);border-color:var(--corn)}
 .qopt.best{background:#e6f5e6;border-color:#4caf50;font-weight:400}
 .qopt.ok{background:var(--corn-l);border-color:var(--corn)}
-.qopt.miss{background:var(--orange-l);border-color:var(--orange)}
+.qopt.miss{background:var(--orange-l);border-color:var(--portland)}
 .qopt:disabled{cursor:default}
 .qopt-ltr{font-weight:500;color:var(--muted);flex-shrink:0;font-size:.8rem;margin-top:1px}
 .qreveal{display:none;border-top:1px solid var(--border);padding:.8rem 1.1rem;background:var(--corn-l);font-size:.9rem;line-height:1.65;color:var(--text)}
@@ -243,7 +243,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .eind-label{font-size:.95rem;color:rgba(255,255,255,.8);margin-top:.65rem;font-weight:300}
 
 .actie{display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--border);border-radius:8px;padding:.8rem 1rem;margin-bottom:.7rem}
-.actie-num{width:30px;height:30px;border-radius:6px;background:var(--orange);color:white;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.actie-num{width:30px;height:30px;border-radius:6px;background:var(--portland);color:white;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .actie-text{font-size:.92rem;color:var(--text);line-height:1.55}
 .actie-text strong{font-weight:500;display:block;margin-bottom:2px;color:var(--royal)}
 .actie-text span{font-size:.76rem;color:var(--muted)}
@@ -270,7 +270,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .fw-stap-name{font-size:.9rem;font-weight:500;color:var(--royal)}
 .fw-toggle-ico{font-size:1.1rem;font-weight:700;color:var(--muted);flex-shrink:0;width:20px;text-align:center}
 .fws-kern{background:var(--royal);color:rgba(255,255,255,.75)}
-.fws-markt{background:var(--orange);color:rgba(255,255,255,.85)}
+.fws-markt{background:var(--portland);color:rgba(255,255,255,.85)}
 .fws-verhaal{background:var(--corn);color:var(--royal)}
 .hl-tag{font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--corn);margin-bottom:.4rem}
 .hlo-label{font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.35rem}
@@ -279,12 +279,12 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 .hoofd-les-opener{background:var(--royal);border-radius:10px;padding:1.1rem 1.4rem;margin:.75rem 0 1.25rem;text-align:center}
 .learning{font-size:.87rem;color:var(--text);line-height:1.55;padding:.5rem .75rem;background:var(--corn-l);border-radius:6px;border-left:2px solid var(--corn)}
 .learnings{display:flex;flex-direction:column;gap:7px;margin:.9rem 0}
-.morgen-actie{background:var(--orange-l);border:2px solid var(--orange);border-radius:8px;padding:.85rem 1.1rem;margin:1.25rem 0;font-size:.9rem;color:var(--text);line-height:1.55}
+.morgen-actie{background:var(--orange-l);border:2px solid var(--portland);border-radius:8px;padding:.85rem 1.1rem;margin:1.25rem 0;font-size:.9rem;color:var(--text);line-height:1.55}
 .morgen-screen{background:var(--corn);border-radius:12px;padding:1.5rem 1.4rem;margin:1.25rem 0}
 .ms-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:.6rem;font-size:.84rem;color:var(--royal);line-height:1.55}
 .ms-label{font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--royal);margin-bottom:.5rem}
 .ms-num{width:22px;height:22px;border-radius:50%;background:var(--royal);color:var(--corn);font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.nav-btn{padding:.35rem 1rem;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:500;cursor:pointer;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:rgba(255,255,255,.07);transition:all .15s}
+.nav-btn{padding:.35rem 1rem;border-radius:20px;font-family:'Oswald',sans-serif;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;cursor:pointer;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:rgba(255,255,255,.07);transition:all .15s}
 .patroon-ico{font-size:1rem;flex-shrink:0}
 .patroon-item{display:flex;gap:10px;align-items:flex-start;padding:.65rem .85rem;border-radius:8px;border:1px solid var(--border);background:white}
 .patroon-rij{display:flex;flex-direction:column;gap:7px;margin:.9rem 0}
@@ -308,7 +308,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
 <div class="screen active" id="s0">
 <div class="hero">
-  <div class="hero-pill">Webinar · 8 juni 2026</div>
+  <div class="hero-pill" style="font-family:'Oswald',sans-serif;letter-spacing:.15em">Webinar · 8 juni 2026</div>
   <p class="hero-h1">Na dit uur kijk je nooit meer<br>hetzelfde naar een <em>merkverhaal.</em></p>
   <p class="hero-sub">Wij zijn Liesbeth en Katrien van Blooming Stories. Wij laten je zien waarom hetzelfde merk in Belgie en Nederland een ander verhaal nodig heeft.</p>
   <div class="top-nav" style="padding:.75rem 2rem;border-top:1px solid rgba(255,255,255,.15);margin-top:1.25rem">
@@ -425,7 +425,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
     <div class="stelling" id="st1">
       <div style="padding:.9rem 1rem .5rem">
-        <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:.3rem">Merk</div>
+        <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--portland);margin-bottom:.3rem">Merk</div>
         <div style="font-size:.95rem;font-weight:600;color:var(--royal);margin-bottom:.2rem">IKEA</div>
         <div style="font-size:.82rem;color:var(--muted);margin-bottom:0;font-style:italic">"Een beter dagelijks leven creëren voor zo veel mogelijk mensen."</div>
       </div>
@@ -441,7 +441,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
       <div class="stelling-reveal" id="sr1">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:.5rem">
           <div style="background:var(--royal);border-radius:6px;padding:.5rem .75rem;font-size:.82rem;color:white"><strong style="color:var(--corn);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">NL: optie A</strong>Direct, functioneel, prijsfocus. In NL overtuig je met een concrete belofte. De klant wil weten wat hij krijgt en wat het kost. Mooi en betaalbaar in één zin werkt.</div>
-          <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:.5rem .75rem;font-size:.82rem"><strong style="color:var(--orange);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">BE: optie B</strong>Warm, anekdotisch, thuis als gevoel. In BE wil je de klant eerst laten glimlachen voor je iets belooft. De kleine herkenbare details openen het verhaal, de claim volgt vanzelf.</div>
+          <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:.5rem .75rem;font-size:.82rem"><strong style="color:var(--portland);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">BE: optie B</strong>Warm, anekdotisch, thuis als gevoel. In BE wil je de klant eerst laten glimlachen voor je iets belooft. De kleine herkenbare details openen het verhaal, de claim volgt vanzelf.</div>
         </div>
         <p style="font-size:.8rem;color:var(--muted);font-style:italic;margin-top:.3rem">Dezelfde missie. Twee totaal andere vertaalslagen.</p>
       </div>
@@ -449,7 +449,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
     <div class="stelling" id="st2">
       <div style="padding:.9rem 1rem .5rem">
-        <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:.3rem">Merk</div>
+        <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--portland);margin-bottom:.3rem">Merk</div>
         <div style="font-size:.95rem;font-weight:600;color:var(--royal);margin-bottom:.2rem">Hema</div>
         <div style="font-size:.82rem;color:var(--muted);margin-bottom:0;font-style:italic">"Een beter alledaags leven in een mooiere wereld."</div>
       </div>
@@ -464,7 +464,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
       </div>
       <div class="stelling-reveal" id="sr2">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:.5rem">
-          <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:.5rem .75rem;font-size:.82rem"><strong style="color:var(--orange);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">NL: optie B</strong>Puntig, direct, geen omwegen. In NL werkt bondigheid. Drie woorden die de kern zeggen zonder uitleg. De Nederlander haakt aan op efficiëntie en helderheid.</div>
+          <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:.5rem .75rem;font-size:.82rem"><strong style="color:var(--portland);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">NL: optie B</strong>Puntig, direct, geen omwegen. In NL werkt bondigheid. Drie woorden die de kern zeggen zonder uitleg. De Nederlander haakt aan op efficiëntie en helderheid.</div>
           <div style="background:var(--royal);border-radius:6px;padding:.5rem .75rem;font-size:.82rem;color:white"><strong style="color:var(--corn);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem">BE: optie A</strong>Warm, vertrouwd, met een tijdloos gevoel. In BE werkt continuïteit en nabijheid. "Jouw vertrouwde buur" bouwt herkenning. De Belgische klant wil weten dat je er al lang bent en blijft.</div>
         </div>
         <p style="font-size:.8rem;color:var(--muted);font-style:italic;margin-top:.3rem">Onthoud dit patroon: je ziet het straks drie keer terugkomen bij de cases.</p>
@@ -501,7 +501,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
 <div class="screen" id="c1-intro">
 <div class="case-hero">
-  <div class="case-pill"><span class="case-pill-dot" style="background:var(--orange)"></span>Case 1 van 3</div>
+  <div class="case-pill"><span class="case-pill-dot" style="background:var(--portland)"></span>Case 1 van 3</div>
   <h1>Albert Heijn<br><em>"Maak eerst de marktkaart."</em></h1>
   <p>Zelfde merk. Zelfde missie. Totaal andere campagnes. Waarom?</p>
 </div>
@@ -547,7 +547,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
     <div class="split-head">🇧🇪 Albert Heijn Belgie</div>
     <div class="split-cols">
       <div class="split-col" style="grid-column:1/-1;border-left:none">
-        <div class="split-flag" style="color:var(--orange);margin-bottom:.5rem">Marktcontext en campagne</div>
+        <div class="split-flag" style="color:var(--portland);margin-bottom:.5rem">Marktcontext en campagne</div>
         <div class="split-body" style="font-size:.92rem;line-height:1.7">
           In Belgie kiest AH bewust een andere positie. Zowel AH als Delhaize maken deel uit van de Ahold Delhaize-groep, dus twee premiummerken naast elkaar zou interne kannibalisatie betekenen. Delhaize bezet het premiumterrein. Colruyt claimt de laagste prijs. AH gaat ertussenin: scherper geprijsd dan Delhaize, met een vergelijkbare winkelervaring en kwaliteitsperceptie die hen onderscheidt van Aldi en Lidl. AH valt ook op met een breed aanbod van vrije producten (producten zonder gluten, lactose en andere allergenen) en innovatief internationaal assortiment.<br><br>
           <strong>Campagne:</strong> de Hamsterweken werken als instapmoment, maar het echte merkverhaal zit in de content. In 2023 lanceerde AH de webserie "De Wereld in het Kleijn": een komische fictieserie rond supermarktmanager Lina en haar team, die klanten achter de schermen meeneemt van een AH-winkel. Entertainment als merkverhaal. Daarna volgde de "Swappen"-campagne: kleine praktische wisseltips voor gezonder eten, met Jeroen Meus en Linde Merckpoel als Vlaamse gezichten. Beter eten bereikbaar maken, in kleine stapjes.<br><br>
@@ -583,7 +583,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
 <div class="screen" id="c1-quiz">
 <div class="case-hero">
-  <div class="case-pill"><span class="case-pill-dot" style="background:var(--orange)"></span>Case 1 · Quiz</div>
+  <div class="case-pill"><span class="case-pill-dot" style="background:var(--portland)"></span>Case 1 · Quiz</div>
   <h1>Albert Heijn<br><em>raad mee</em></h1>
   <p>Drie vragen over campagnes, claims en merkverhaal over de grens.</p>
 </div>
@@ -895,7 +895,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
     <div class="split-head">🇧🇪 Qmusic Belgie</div>
     <div class="split-cols">
       <div class="split-col" style="grid-column:1/-1;border-left:none">
-        <div class="split-flag" style="color:var(--orange);margin-bottom:.5rem">Merkverhaal en uitingen</div>
+        <div class="split-flag" style="color:var(--portland);margin-bottom:.5rem">Merkverhaal en uitingen</div>
         <div class="split-body" style="font-size:.92rem;line-height:1.7">
           Tweede grootste zender van Vlaanderen (13,19%, sept-dec 2025, na Radio 2 met 25,38%). Marktleider bij 18-44 jaar (25,1%, CIM 2025). Dj's zoals Maarten en Dorothee focussen op warmte en zelfspot. Het Q-Beach House in Oostende maakt de hele zomer live radio tussen vakantiegangers.<br><br>
           <strong>Merkkarakter BE:</strong> warm, laagdrempelig en interactief. Luisteraars bellen in met persoonlijke verhalen. De studio is een glazen huis: de livecamera zendt 24/7 uit. De Foute Party vindt in NL en BE plaats, maar in BE is ze emotioneel sterker verankerd in de Vlaamse cultuur. "Het Verboden Woord" is een typisch Vlaams format. In NL speelt Qmusic ook "Het Geluid" maar als nationale actie met andere schaal. Rode Neuzen Dag maakte van luisteraars echte deelnemers.<br><br>
@@ -1037,21 +1037,21 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
   <div class="lbl">Een gedragen merkverhaal in Belgie</div>
   <div style="display:flex;flex-direction:column;gap:9px;margin:.75rem 0 1.25rem">
     <div style="display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--border);border-radius:9px;padding:.85rem 1rem">
-      <div style="width:34px;height:34px;border-radius:7px;background:var(--orange);color:white;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif">1</div>
+      <div style="width:34px;height:34px;border-radius:7px;background:var(--portland);color:white;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif">1</div>
       <div>
         <div style="font-size:.9rem;font-weight:500;color:var(--royal);margin-bottom:.25rem">Laat je doelgroep zich gezien voelen.</div>
         <div style="font-size:.86rem;color:var(--muted);line-height:1.55">AH deed dit via Vlaamse gezichten en lokale herkenbaarheid. In BE wil de klant voelen dat jij hem begrijpt, voor je iets claimt.</div>
       </div>
     </div>
     <div style="display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--border);border-radius:9px;padding:.85rem 1rem">
-      <div style="width:34px;height:34px;border-radius:7px;background:var(--orange);color:white;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif">2</div>
+      <div style="width:34px;height:34px;border-radius:7px;background:var(--portland);color:white;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif">2</div>
       <div>
         <div style="font-size:.9rem;font-weight:500;color:var(--royal);margin-bottom:.25rem">Bewijs je belofte in elk contactmoment.</div>
         <div style="font-size:.86rem;color:var(--muted);line-height:1.55">Coolblue deed dit via lokale service, Vlaamse content en fysieke winkels. Een merkverhaal wordt pas gedragen als elk contactmoment de belofte bewijst.</div>
       </div>
     </div>
     <div style="display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--border);border-radius:9px;padding:.85rem 1rem">
-      <div style="width:34px;height:34px;border-radius:7px;background:var(--orange);color:white;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif">3</div>
+      <div style="width:34px;height:34px;border-radius:7px;background:var(--portland);color:white;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif">3</div>
       <div>
         <div style="font-size:.9rem;font-weight:500;color:var(--royal);margin-bottom:.25rem">Wordt pas echt gedragen als mensen er zelf deel van zijn.</div>
         <div style="font-size:.86rem;color:var(--muted);line-height:1.55">Qmusic deed dit door luisteraars co-creator te maken. In NL zeg je het zelf. In BE laat je anderen het zeggen en beleven.</div>
@@ -1098,17 +1098,17 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 
   <div style="display:flex;flex-direction:column;gap:9px;margin:.9rem 0 1.25rem">
     <div style="background:white;border:1px solid var(--border);border-radius:9px;padding:1rem 1.1rem">
-      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 1 · AH-les</div>
+      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--portland);margin-bottom:.35rem">Vraag 1 · AH-les</div>
       <p style="font-size:.93rem;font-weight:500;color:var(--royal);margin-bottom:.3rem">Welk terrein is in jouw Belgische markt al bezet?</p>
       <p style="font-size:.88rem;color:var(--muted);line-height:1.55">Wie zijn de spelers? Hoe positioneren zij zich? Welke ruimte past bij jouw kern? Pas als je dit weet, kies je je toon en campagne.</p>
     </div>
     <div style="background:white;border:1px solid var(--border);border-radius:9px;padding:1rem 1.1rem">
-      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 2 · Coolblue-les</div>
+      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--portland);margin-bottom:.35rem">Vraag 2 · Coolblue-les</div>
       <p style="font-size:.93rem;font-weight:500;color:var(--royal);margin-bottom:.3rem">Waar bewijs jij jouw belofte aan de Belgische klant?</p>
       <p style="font-size:.88rem;color:var(--muted);line-height:1.55">Je klantcontact, je service, je fysieke aanwezigheid. Klinkt je campagne Belgisch maar voelt je service Nederlands? Dan is er een kloof. Dicht die eerst.</p>
     </div>
     <div style="background:white;border:1px solid var(--border);border-radius:9px;padding:1rem 1.1rem">
-      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem">Vraag 3 · Qmusic-les</div>
+      <div style="font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--portland);margin-bottom:.35rem">Vraag 3 · Qmusic-les</div>
       <p style="font-size:.93rem;font-weight:500;color:var(--royal);margin-bottom:.3rem">Wie laat jij voor jou spreken in Belgie?</p>
       <p style="font-size:.88rem;color:var(--muted);line-height:1.55">In NL overtuig je met eigen claims. In BE overtuigen jouw klanten voor jou. Welke Belgische klant spreekt jouw taal en draagt jouw verhaal?</p>
     </div>
