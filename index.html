@@ -302,7 +302,10 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
 <body>
 <header>
   <div class="logo">Blooming <em>Stories</em></div>
-  <div class="hdate">8 juni 2026 · 11u</div>
+  <div style="display:flex;align-items:center;gap:.75rem">
+    <button id="back-btn" onclick="goBack()" title="Terug" style="background:none;border:none;color:rgba(255,255,255,.4);font-size:1.1rem;cursor:pointer;padding:.2rem .4rem;transition:opacity .2s;line-height:1;font-family:sans-serif">&#8592;</button>
+    <div class="hdate">8 juni 2026 · 11u</div>
+  </div>
 </header>
 <div class="prog-wrap"><div class="prog-track"><div class="prog-fill" id="prog"></div></div></div>
 
@@ -435,8 +438,8 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
         <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">B.</strong> "Jij maakt van een huis een thuis. Wij helpen je daarbij, elke dag opnieuw."</div>
       </div>
       <div class="stelling-opts">
-        <button class="stelling-btn" onclick="stel(1,'A',this,'A')">A &rarr; NL</button>
-        <button class="stelling-btn" onclick="stel(1,'B',this,'A')">B &rarr; NL</button>
+        <button class="stelling-btn" onclick="stel(1,'A',this,'A')">A</button>
+        <button class="stelling-btn" onclick="stel(1,'B',this,'A')">B</button>
       </div>
       <div class="stelling-reveal" id="sr1">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:.5rem">
@@ -459,8 +462,8 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
         <div style="font-size:.86rem;padding:.45rem .7rem;background:white;border:1px solid var(--border);border-radius:6px"><strong style="color:var(--royal)">B.</strong> "Goeie spullen. Eerlijke prijs. Punt."</div>
       </div>
       <div class="stelling-opts">
-        <button class="stelling-btn" onclick="stel(2,'A',this,'A')">A &rarr; BE</button>
-        <button class="stelling-btn" onclick="stel(2,'B',this,'A')">B &rarr; BE</button>
+        <button class="stelling-btn" onclick="stel(2,'A',this,'A')">A</button>
+        <button class="stelling-btn" onclick="stel(2,'B',this,'A')">B</button>
       </div>
       <div class="stelling-reveal" id="sr2">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:.5rem">
@@ -653,7 +656,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
     
     <div class="lbl" style="margin-top:1.25rem">5 learnings uit deze case</div>
     <div class="learnings">
-      <div class="learning"><strong>1.</strong> De kern van je merk reist altijd mee. Hoe je die kern vertaalt naar campagnes en claims, stemt je af op de markt en doelgroep. Niet de kern aanpassen, wel het verhaal.</div>
+      <div class="learning"><strong>1.</strong> De kern van je merk reist altijd mee. Hoe je die kern vertaalt naar campagnes en claims, stem je af op de markt en doelgroep. Niet de kern aanpassen, wel het verhaal.</div>
       <div class="learning"><strong>2.</strong> AH is vergelijkbaar geprijsd met Colruyt, goedkoper dan Delhaize, maar met een beduidend betere beleving dan Colruyt, Aldi of Lidl. Die middenpositie werkt alleen met een warm merkverhaal erachter.</div>
       <div class="learning"><strong>3.</strong> In NL werkt een directe claim. In BE bouwt de consument eerst een gevoel van herkenning en vertrouwen op voor hij je gelooft. Warmte, lokale herkenbaarheid en humor zijn daar geen trucje, ze zijn wat de Belgische doelgroep nodig heeft.</div>
       <div class="learning"><strong>4.</strong> AH maakte een Vlaamse webserie, werkte met Belgische gezichten en haakte in op Vlaamse tv-cultuur. Dat is lokaliseren. Een NL-campagne vertalen naar het Vlaams is dat niet.</div>
@@ -1274,7 +1277,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.6vw,1.9rem);fon
     <div class="actie-num">2</div>
     <div class="actie-text">
       <strong>Lokaliseer je bewijs</strong>
-      <span>Staat er een Belgische naam, een lokaal telefoonnummer of een Belgisch adres op je website? Zo niet: voeg het toe. Verzamel ook drie Belgische klantenverhalen. Niet als review, als verhaal.</span>
+      <span>Staat er een Belgische contactpersoon, een lokaal telefoonnummer of een Belgisch adres op je website? Zo niet: voeg het toe. Hoe kun je de Nederlandse merktoon gebruiken in je Vlaamse content? Vlaamse uitdrukkingen, herkenbare referenties, lokale humor. En: verzamel drie Belgische klantenverhalen. Niet als review, als verhaal.</span>
     </div>
   </div>
   <div class="actie">
@@ -1316,19 +1319,42 @@ const screens=['s0','s1','s1b','s2_wie','s_vraag','s_principe','s10','c1-intro',
 const pcts=[0,3,6,9,13,17,22,27,33,38,44,49,55,60,66,72,78,83,88,94,100];
 const bloks={0:'s0',1:'c1-intro',2:'p1'};
 
+let navHistory=[];
 function go(id){
+  const cur=document.querySelector('.screen.active');
+  if(cur&&cur.id) navHistory.push(cur.id);
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   const el=document.getElementById(id);
   if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
   const idx=screens.indexOf(id);
   if(idx>=0)document.getElementById('prog').style.width=pcts[idx]+'%';
-  // 3 nav knoppen: Welkom=0..s10, Cases=c1..c3-quiz, Takeaways=p1..afs1
   const caseScreens=['c1-intro','c1-quiz','c2-intro','c2-quiz','c3-intro','c3-quiz'];
   const takScreens=['p1','p2','eind','s9','s9b','s9c','act1','afs1'];
   let ab=0;
   if(caseScreens.includes(id)) ab=1;
   else if(takScreens.includes(id)) ab=2;
   document.querySelectorAll('.nav-btn').forEach((b,i)=>b.classList.toggle('active',i===ab));
+  updateBackBtn();
+}
+function goBack(){
+  if(navHistory.length===0) return;
+  const prev=navHistory.pop();
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  const el=document.getElementById(prev);
+  if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+  const idx=screens.indexOf(prev);
+  if(idx>=0)document.getElementById('prog').style.width=pcts[idx]+'%';
+  const caseScreens=['c1-intro','c1-quiz','c2-intro','c2-quiz','c3-intro','c3-quiz'];
+  const takScreens=['p1','p2','eind','s9','s9b','s9c','act1','afs1'];
+  let ab=0;
+  if(caseScreens.includes(prev)) ab=1;
+  else if(takScreens.includes(prev)) ab=2;
+  document.querySelectorAll('.nav-btn').forEach((b,i)=>b.classList.toggle('active',i===ab));
+  updateBackBtn();
+}
+function updateBackBtn(){
+  const btn=document.getElementById('back-btn');
+  if(btn) btn.style.opacity=navHistory.length>0?'1':'0.35';
 }
 
 function goBlok(n){go(bloks[n]);}
